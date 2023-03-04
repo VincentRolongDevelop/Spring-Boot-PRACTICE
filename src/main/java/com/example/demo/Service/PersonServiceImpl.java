@@ -1,6 +1,8 @@
 package com.example.demo.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+
 import com.example.demo.repository.InterfacePerson;
 
 //Video 4 general idea: Then after that the name goes for the Repository layer thanks to this instance
@@ -34,6 +36,7 @@ public class PersonServiceImpl implements IpersonService{
 	 ⬇ ⬇ ⬇ ⬇ ⬇ ⬇
 	*/
 	@Autowired
+	@Qualifier("person2")
 	private InterfacePerson repo;
 
 	@Override

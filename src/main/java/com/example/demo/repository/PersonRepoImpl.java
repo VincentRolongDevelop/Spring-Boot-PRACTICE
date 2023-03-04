@@ -2,7 +2,9 @@ package com.example.demo.repository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
+
 import com.example.demo.Practiceproject1Application;
 
 /*
@@ -16,7 +18,21 @@ Stereotypes, the best option for data storage or repository is
 
  ⬇ ⬇ ⬇ ⬇ ⬇ ⬇
 */
+
+/*
+ *VIDEO 5:
+
+Sometimes we need or have more than one implementation of an Interface
+to solve that problem we have the annotation @Qualifier that makes this separation possible,
+with this we can decided what of the 2 implementation will work.
+
+
+@Qualifier works as you can see below
+
+ ⬇ ⬇ ⬇ ⬇ ⬇ ⬇
+*/
 @Repository
+@Qualifier("person1")
 public class PersonRepoImpl implements InterfacePerson{
 	
 	private static Logger LOG = LoggerFactory.getLogger(Practiceproject1Application.class);
