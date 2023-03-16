@@ -30,6 +30,13 @@ public class DemoController {
 		model.addAttribute("name", name);
 		return "index";
 	}
+	
+	@GetMapping("/listar")
+	public String greeting( Model model) {
+		//Logic	
+		model.addAttribute("persons", repo.findAll());
+		return "index";
+	}
 }
 
 
