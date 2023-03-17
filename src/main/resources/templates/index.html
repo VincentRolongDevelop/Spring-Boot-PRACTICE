@@ -7,6 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <p th:text="'Hello, ' +${name} + '!'">/p>
+    <p th:text="'Hello, ' +${name} + '!'"></p>
+    
+    <table>
+    	<th:block th:each="per : ${persons}">
+    		<tr>
+    		<td th:text="${per.idPerson}">...</td>
+    		<td th:text="${per.name}">...</td>
+    		</tr>
+    	</th:block>
+    </table>
 </body>
 </html>
