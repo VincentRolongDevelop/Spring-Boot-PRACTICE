@@ -7,14 +7,14 @@ import jakarta.persistence.Id;
 public class User {
 	
 	@Id
-	private String id;
+	private int id;
 	private String name;
 	private String password;
 	
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -28,5 +28,5 @@ public class User {
 	}
 	public void setPassword(String password) {
 		this.password = password;
-	}
+	}	
 }

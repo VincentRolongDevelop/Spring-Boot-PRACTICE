@@ -19,12 +19,12 @@ public class Practiceproject1ApplicationTests {
 	@Test
 	public void newUser() {
 		User us = new User();
-		us.setId(1);
-		us.setName("Vincent Rolong");
-		us.setPassword("12345");
+		us.setId(2);
+		us.setName("vincentR");
+		us.setPassword("1234");
 		User retorno = repo.save(us);
 		
-		assertTrue(retorno.getPassword().equalsIgnoreCase(us.getName()));
+		assertTrue(retorno.getPassword().equalsIgnoreCase(us.getPassword()));
 	}
 
 }
